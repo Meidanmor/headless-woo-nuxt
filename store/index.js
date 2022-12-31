@@ -20,7 +20,7 @@ export const actions = {
 
     try {
       let posts = await fetch(
-        `${siteURL}/wp-json/wc/store/v1/products?per_page=100`
+        `${siteURL}/wp-json/wc/store/products?page=1&per_page=100`
       ).then(res => res.json())
 
       posts = posts
