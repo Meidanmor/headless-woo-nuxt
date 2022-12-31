@@ -1,8 +1,8 @@
 <template>
   <main class="post individual">
-    <h1>{{ post.title.rendered }}</h1>
+    <h1>{{ post.name }}</h1>
     <small class="date">{{ post.date | dateformat }}</small>
-    <section v-html="post.content.rendered"></section>
+    <section v-html="post.short_description"></section>
   </main>
 </template>
 
