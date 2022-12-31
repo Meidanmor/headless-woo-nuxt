@@ -13,7 +13,7 @@ export default {
       return this.$store.state.posts;
     },
     post() {
-      return this.posts.find(el => el.slug === this.slug);
+      return this.posts.find(el => el.permalink.replace('https://nuxt.meidanm.com/product/','') === this.slug);
     }
   },
   data() {
