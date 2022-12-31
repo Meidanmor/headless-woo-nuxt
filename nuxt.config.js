@@ -3,7 +3,7 @@ let dynamicRoutes = () => {
   const routes = axios
     .get("https://nuxt.meidanm.com/wp-json/wc/store/products?page=1&per_page=100")
     .then(res => {
-      return res.data.map(post => `/blog/${post.slug}`)
+      return res.data.map(post => `/blog/${post.permalink.replace('https://nuxt.meidanm.com/product/','')}`)
     })
   console.log(routes)
   return routes
